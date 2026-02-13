@@ -1,79 +1,244 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Bayou State Football – War Tour 2032</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #0B3D2E;
-            color: white;
-            text-align: center;
-        }
-        header {
-            background-color: #000;
-            padding: 40px 20px;
-        }
-        h1 {
-            margin: 0;
-            font-size: 40px;
-            letter-spacing: 3px;
-        }
-        .gold {
-            color: #C9A227;
-        }
-        section {
-            padding: 40px 20px;
-        }
-        .card {
-            background: #111;
-            margin: 15px auto;
-            padding: 20px;
-            max-width: 600px;
-            border-radius: 10px;
-        }
-        footer {
-            background: #000;
-            padding: 20px;
-            font-size: 14px;
-            color: #aaa;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bayou State Football</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #0B3D2E;
+    color: white;
+}
+
+/* NAVBAR */
+nav {
+    position: sticky;
+    top: 0;
+    background: black;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 30px;
+    z-index: 1000;
+}
+
+nav h2 {
+    margin: 0;
+    color: #C9A227;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #C9A227;
+}
+
+/* HERO */
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+    background: linear-gradient(270deg, #0B3D2E, #145A32, #0B3D2E);
+    background-size: 600% 600%;
+    animation: gradientMove 12s ease infinite;
+}
+
+@keyframes gradientMove {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+}
+
+.hero h1 {
+    font-size: 48px;
+    letter-spacing: 4px;
+}
+
+.gold {
+    color: #C9A227;
+}
+
+/* SECTION */
+section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+/* STATS */
+.stats {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.stat-box {
+    background: #111;
+    padding: 30px;
+    border-radius: 12px;
+    width: 200px;
+}
+
+.stat-number {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+/* PLAYER CARDS */
+.player-card {
+    background: #111;
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 600px;
+    border-radius: 12px;
+    transition: transform 0.3s ease;
+}
+
+.player-card:hover {
+    transform: scale(1.05);
+}
+
+/* ARCHIVE PREVIEW */
+.archive-entry {
+    background: #111;
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 700px;
+    border-left: 5px solid #C9A227;
+    text-align: left;
+}
+
+/* FOOTER */
+footer {
+    background: black;
+    text-align: center;
+    padding: 20px;
+    color: #aaa;
+}
+</style>
 </head>
+
 <body>
 
-<header>
+<nav>
+    <h2>Bayou State Football</h2>
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#war">War Tour</a></li>
+        <li><a href="#players">Players</a></li>
+        <li><a href="#archive">Archive</a></li>
+    </ul>
+</nav>
+
+<div class="hero">
     <h1>BAYOU STATE FOOTBALL</h1>
     <p class="gold">2032 – The Year Bayou State Went to War</p>
-</header>
+</div>
 
 <section>
-    <h2 class="gold">Season Highlights</h2>
-    <div class="card">
-        <p>CFP 4-Seed</p>
-        <p>John Mackey Award – Tashaun Callow</p>
-        <p>1st Team All-American</p>
-        <p>2× 1st Team All-BIG 12</p>
-        <p>2nd Team All-BIG 12</p>
+    <h2 class="gold">Program Snapshot</h2>
+    <div class="stats">
+        <div class="stat-box">
+            <div class="stat-number" data-target="4">0</div>
+            <div>CFP Seed</div>
+        </div>
+        <div class="stat-box">
+            <div class="stat-number" data-target="1">0</div>
+            <div>All-American</div>
+        </div>
+        <div class="stat-box">
+            <div class="stat-number" data-target="2">0</div>
+            <div>1st Team All-BIG 12</div>
+        </div>
+        <div class="stat-box">
+            <div class="stat-number" data-target="4">0</div>
+            <div>All-Freshman</div>
+        </div>
     </div>
 </section>
 
-<section>
-    <h2 class="gold">All-Freshman Team</h2>
-    <div class="card">
-        <p>RB Branden Ball</p>
-        <p>RB Marquez Benshaw</p>
-        <p>WR Kwabena Madubuike</p>
-        <p>S Jayden Bunch</p>
+<section id="war">
+    <h2 class="gold">2032 War Tour</h2>
+    <p>CFP 4-Seed season that launched Bayou State into national prominence. Elite freshman talent and national award winners defined the year.</p>
+</section>
+
+<section id="players">
+    <h2 class="gold">Featured Players</h2>
+
+    <div class="player-card">
+        <h3>Tashaun Callow – TE</h3>
+        <p>John Mackey Award Winner</p>
+        <p>1st Team All-American</p>
+        <p>1st Team All-BIG 12</p>
     </div>
+
+    <div class="player-card">
+        <h3>Alex Boatwright</h3>
+        <p>1st Team All-BIG 12</p>
+    </div>
+
+    <div class="player-card">
+        <h3>Pat Delmas</h3>
+        <p>2nd Team All-BIG 12</p>
+    </div>
+
+    <div class="player-card">
+        <h3>Jayden Bunch – S</h3>
+        <p>BIG 12 All-Freshman Team</p>
+    </div>
+
+</section>
+
+<section id="archive">
+    <h2 class="gold">Dynasty Archive</h2>
+
+    <div class="archive-entry">
+        <h3>2032 – War Tour Season</h3>
+        <p>CFP 4-Seed | National Awards | Breakout Freshman Class</p>
+    </div>
+
+    <div class="archive-entry">
+        <h3>2033 – Coming Soon</h3>
+        <p>The dynasty continues.</p>
+    </div>
+
 </section>
 
 <footer>
     Built for the Dynasty. Powered by the War Tour.
 </footer>
+
+<script>
+const counters = document.querySelectorAll('.stat-number');
+
+counters.forEach(counter => {
+    const updateCount = () => {
+        const target = +counter.getAttribute('data-target');
+        const count = +counter.innerText;
+        const increment = target / 60;
+
+        if (count < target) {
+            counter.innerText = Math.ceil(count + increment);
+            setTimeout(updateCount, 20);
+        } else {
+            counter.innerText = target;
+        }
+    };
+    updateCount();
+});
+</script>
 
 </body>
 </html>
