@@ -6,6 +6,8 @@
 <title>Bayou State Football</title>
 
 <style>
+* { box-sizing: border-box; }
+
 body {
     margin: 0;
     font-family: 'Segoe UI', sans-serif;
@@ -14,7 +16,7 @@ body {
     overflow-x: hidden;
 }
 
-/* NAVBAR */
+/* NAV */
 nav {
     background: rgba(0,0,0,0.95);
     display: flex;
@@ -25,141 +27,95 @@ nav {
     position: relative;
 }
 
-nav .logo {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-}
-
 nav img {
-    height: 40px;
+    height: 45px;
 }
 
-nav h2 {
-    margin: 0;
-    color: #C9A227;
-    letter-spacing: 2px;
-    font-size: 18px;
-}
-
-/* NAV LINKS */
 .nav-links {
     display: flex;
     gap: 25px;
 }
 
-.nav-links a {
+.nav-links button {
+    background: none;
+    border: none;
     color: white;
-    text-decoration: none;
     font-weight: bold;
-    transition: 0.3s;
+    cursor: pointer;
 }
 
-.nav-links a:hover {
+.nav-links button:hover {
     color: #C9A227;
 }
 
-/* MOBILE MENU BUTTON */
 .menu-toggle {
     display: none;
     font-size: 26px;
     cursor: pointer;
+    color: #C9A227;
 }
 
-/* CHAMP BANNER */
-.champ-banner {
-    background: #C9A227;
-    color: black;
-    text-align: center;
-    padding: 10px;
-    font-weight: bold;
-    letter-spacing: 2px;
-    font-size: 14px;
+/* SECTIONS */
+.section {
+    display: none;
+    padding: 60px 8%;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.section.active {
+    display: block;
+}
+
+.section h2 {
+    color: #C9A227;
+    border-bottom: 2px solid #C9A227;
+    padding-bottom: 6px;
+}
+
+.player {
+    padding: 6px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
 }
 
 /* HERO */
 .hero {
     text-align: center;
-    padding: 90px 20px;
+    padding: 100px 20px;
     background: linear-gradient(to bottom, #0B3D2E, #000);
 }
 
-.hero img {
-    width: 220px;
-    margin-bottom: 20px;
-}
-
-.hero h1 {
-    font-size: 36px;
-    margin-bottom: 10px;
-    letter-spacing: 3px;
-}
-
-.gold {
-    color: #C9A227;
-}
-
-/* SECTION */
-section {
-    padding: 60px 8%;
-    text-align: center;
-}
-
-.section-title {
-    font-size: 26px;
-    margin-bottom: 25px;
-    border-bottom: 2px solid #C9A227;
-    display: inline-block;
-    padding-bottom: 5px;
-}
-
-.info-box {
-    background: #111;
-    padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0 0 20px rgba(201,162,39,0.2);
-}
-
-/* FOOTER */
-footer {
-    background: black;
-    padding: 20px;
-    text-align: center;
-    border-top: 2px solid #C9A227;
-    font-size: 14px;
-}
-
-/* MOBILE RESPONSIVE */
+/* MOBILE */
 @media (max-width: 768px) {
+    .menu-toggle { display: block; }
 
     .nav-links {
         display: none;
         flex-direction: column;
         background: #111;
         position: absolute;
-        top: 70px;
-        right: 0;
+        top: 65px;
+        left: 0;
         width: 100%;
+        padding: 15px 0;
         text-align: center;
-        padding: 20px 0;
     }
 
     .nav-links.active {
         display: flex;
     }
 
-    .menu-toggle {
-        display: block;
-        color: #C9A227;
-    }
-
-    nav h2 {
+    .nav-links button {
+        padding: 12px 0;
         font-size: 16px;
     }
+}
 
-    .hero h1 {
-        font-size: 28px;
-    }
+footer {
+    background: black;
+    padding: 20px;
+    text-align: center;
+    border-top: 2px solid #C9A227;
 }
 </style>
 </head>
@@ -167,48 +123,151 @@ footer {
 <body>
 
 <nav>
-    <div class="logo">
-        <img src="logos.png" alt="Bayou State Logo">
-        <h2>BAYOU STATE</h2>
-    </div>
+    <img src="logos.png" alt="Bayou State Logo">
 
     <div class="menu-toggle" onclick="toggleMenu()">☰</div>
 
     <div class="nav-links" id="navLinks">
-        <a href="/BayoustateFB/index.html">Home</a>
-        <a href="/BayoustateFB/roster.html">Roster</a>
-        <a href="/BayoustateFB/records.html">Records</a>
-        <a href="/BayoustateFB/hof.html">HOF</a>
-        <a href="/BayoustateFB/coaches.html">Coaching Staff</a>
+        <button onclick="showSection('home')">Home</button>
+        <button onclick="showSection('roster')">Roster</button>
+        <button onclick="showSection('records')">Records</button>
+        <button onclick="showSection('hof')">HOF</button>
+        <button onclick="showSection('coaches')">Coaching Staff</button>
     </div>
 </nav>
 
-<div class="champ-banner">
-    BACK-TO-BACK BIG 12 CHAMPIONS
+<!-- HOME -->
+<div id="home" class="section active hero">
+    <h1>Bayou State Football</h1>
+    <p style="color:#C9A227;">Back-to-Back BIG 12 Champions</p>
+    <p>The War Tour Continues.</p>
 </div>
 
-<div class="hero">
-    <img src="logos.png" alt="Primary Gator Logo">
-    <h1>BAYOU STATE FOOTBALL</h1>
-    <p class="gold">The Dynasty Lives in the Swamp</p>
+<!-- ROSTER -->
+<div id="roster" class="section">
+
+<h2>2032 Official Team Roster</h2>
+
+<h3>Quarterbacks</h3>
+<div class="player">#7 Louis Waiters — JR (RS)</div>
+<div class="player">#13 Ricardo Cooke — FR (RS)</div>
+<div class="player">#3 Joey Neufeld — SO (RS)</div>
+<div class="player">#1 Bradley Garland — FR</div>
+
+<h3>Running Backs</h3>
+<div class="player">#28 Alex Boatwright — SR (RS) — 1st Team All-BIG 12</div>
+<div class="player">#23 Branden Ball — FR (RS) — BIG 12 All-Freshman</div>
+<div class="player">#0 Marquez Benshaw — FR — BIG 12 All-Freshman</div>
+
+<h3>Wide Receivers</h3>
+<div class="player">#17 Eric Shabazz — JR</div>
+<div class="player">#9 Rasheem Drew — JR</div>
+<div class="player">#11 Kwabena Madubuike — FR — BIG 12 All-Freshman</div>
+<div class="player">#4 Maka Bundy — FR (RS)</div>
+
+<h3>Tight Ends</h3>
+<div class="player">#5 Tashaun Callow — SO — John Mackey Award Winner — 1st Team All-American</div>
+<div class="player">#81 Marquee Bramble — FR</div>
+<div class="player">#84 Nick Tuttle — JR (RS)</div>
+<div class="player">#85 Denard Tonyan — SO</div>
+
+<h3>Offensive Line</h3>
+<div class="player">#66 Eli Kessler — LT — SR (RS)</div>
+<div class="player">#57 Fetu Choy — LG — SO</div>
+<div class="player">#75 Lionel Marvin — C — JR (RS)</div>
+<div class="player">#58 Jeffery Fuller — RG — SR</div>
+<div class="player">#70 Monty Nesbit — RT — SO (RS)</div>
+
+<h3>Defensive Line</h3>
+<div class="player">#4 Pascal Nwokeji — EDGE — JR (RS)</div>
+<div class="player">#56 Pat Delmas — EDGE — SR (RS) — 2nd Team All-BIG 12</div>
+<div class="player">#92 Lamar Fairchild — DT — SO (RS)</div>
+<div class="player">#77 Gideon Chekwa — DT — SR</div>
+
+<h3>Linebackers (4-2-5)</h3>
+<div class="player">SAM: #52 Khari Reynaud — SO</div>
+<div class="player">SAM2: #10 Tyler Cooke — FR</div>
+<div class="player">MIKE1: #41 Eric Bajema — SR</div>
+<div class="player">MIKE2: #10 Tyler Cooke — FR</div>
+<div class="player">MIKE: #33 Trent Adams — SO (RS)</div>
+<div class="player">WILL1: #0 Dorian Hagg — JR (RS)</div>
+<div class="player">WILL2: #10 Tyler Cooke — FR</div>
+
+<h3>Secondary</h3>
+<div class="player">CB1: #24 Adonis Landers — SR</div>
+<div class="player">CB2: #15 Jimmy Sharp — JR (RS)</div>
+<div class="player">CB3: #17 Rico Bitonio — SO</div>
+<div class="player">CB4: #18 Matt Maggio — JR (RS)</div>
+<div class="player">FS1: #21 Lester Boyce — JR</div>
+<div class="player">FS2: #25 Quincy Oladokun — SO</div>
+<div class="player">FS3: #6 Jayden Bunch — FR — BIG 12 All-Freshman</div>
+<div class="player">SS1: #25 Quincy Oladokun — SO</div>
+<div class="player">SS2: #6 Jayden Bunch — FR</div>
+
+<h3>Special Teams</h3>
+<div class="player">K: #16 Jake Mare — SO</div>
+<div class="player">P: #15 Jamie Ferreira — JR (RS)</div>
+<div class="player">LS: #84 Nick Tuttle — JR (RS)</div>
+<div class="player">PR1: #9 Rasheem Drew — JR</div>
+<div class="player">PR2: #17 Eric Shabazz — JR</div>
+<div class="player">KR1: #11 Kwabena Madubuike — FR</div>
+<div class="player">KR2: #23 Branden Ball — FR (RS)</div>
+
 </div>
 
-<section>
-    <h2 class="section-title gold">Program Standard</h2>
-    <div class="info-box">
-        <p>Built on dominance in the trenches.</p>
-        <p>Fueled by elite quarterback play.</p>
-        <p>Defined by championship culture.</p>
-        <br>
-        <p><strong>We don’t rebuild. We reload.</strong></p>
-    </div>
-</section>
+<!-- RECORDS -->
+<div id="records" class="section">
+<h2>Program Records</h2>
+
+<h3>Passing Yards</h3>
+<p><strong>Game:</strong> 482 — Darius Kincaid (2019)</p>
+<p><strong>Season:</strong> 3,842 — Marcus Vale (2029)</p>
+<p><strong>Career:</strong> 10,904 — Caleb Rowe (2026–2029)</p>
+
+<h3>Rushing Yards</h3>
+<p><strong>Game:</strong> 268 — Terrell Boone (2007)</p>
+<p><strong>Season:</strong> 1,744 — Jamal Brice (2028)</p>
+<p><strong>Career:</strong> 4,102 — Jamal Brice (2025–2028)</p>
+
+<h3>Receiving Yards</h3>
+<p><strong>Game:</strong> 211 — Avery Monroe (2014)</p>
+<p><strong>Season:</strong> 1,386 — Malik Stratton (2030)</p>
+<p><strong>Career:</strong> 3,972 — Malik Stratton (2028–2031)</p>
+
+<h3>Sacks</h3>
+<p><strong>Game:</strong> 4.0 — Leonard Voss (2013)</p>
+<p><strong>Season:</strong> 13.5 — Tyrese Holloway (2027)</p>
+<p><strong>Career:</strong> 32.0 — Tyrese Holloway (2025–2028)</p>
+
+<h3>Interceptions</h3>
+<p><strong>Game:</strong> 3 — Kelvin Draper (2005)</p>
+<p><strong>Season:</strong> 8 — Andre Talley (2018)</p>
+<p><strong>Career:</strong> 17 — Andre Talley (2016–2019)</p>
+</div>
+
+<div id="hof" class="section">
+<h2>Bayou State Hall of Fame</h2>
+<p>Coming Soon.</p>
+</div>
+
+<div id="coaches" class="section">
+<h2>Coaching Staff</h2>
+<p>Coming Soon.</p>
+</div>
 
 <footer>
-© 2032 Bayou State Football — The War Tour Era
+© 2032 Bayou State Football — The War Tour Continues
 </footer>
 
 <script>
+function showSection(sectionId) {
+    document.querySelectorAll('.section').forEach(section => {
+        section.classList.remove('active');
+    });
+    document.getElementById(sectionId).classList.add('active');
+    document.getElementById("navLinks").classList.remove("active");
+}
+
 function toggleMenu() {
     document.getElementById("navLinks").classList.toggle("active");
 }
