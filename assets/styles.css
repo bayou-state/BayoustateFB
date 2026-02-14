@@ -30,10 +30,10 @@ body {
 
 /* Main content expands naturally */
 section {
-  width: 100%;
-  max-width: 1100px;
-  margin: 60px auto;      /* more consistent top spacing */
-  padding: 0 20px 80px 20px; /* bottom breathing room */
+  width: 92%;
+  max-width: 1400px;
+  margin: 80px auto;
+  padding: 0 20px 100px 20px;
   flex: 1;
 }
 
