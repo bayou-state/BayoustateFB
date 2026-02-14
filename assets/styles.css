@@ -1,4 +1,8 @@
-/* RESET */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}/* RESET */
 * {
   margin: 0;
   padding: 0;
