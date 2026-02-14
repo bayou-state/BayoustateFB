@@ -80,56 +80,6 @@ section {
     text-align: center;
 }
 
-/* STATS */
-.stats {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 25px;
-    margin-top: 30px;
-}
-
-.stat-box {
-    background: #111;
-    padding: 30px;
-    border-radius: 12px;
-    width: 200px;
-    transition: transform 0.3s ease;
-}
-
-.stat-box:hover {
-    transform: scale(1.05);
-}
-
-.stat-number {
-    font-size: 36px;
-    font-weight: bold;
-}
-
-/* PLAYER CARDS */
-.player-card {
-    background: #111;
-    margin: 20px auto;
-    padding: 25px;
-    max-width: 600px;
-    border-radius: 12px;
-    transition: transform 0.3s ease;
-}
-
-.player-card:hover {
-    transform: scale(1.05);
-}
-
-/* ARCHIVE */
-.archive-entry {
-    background: #111;
-    margin: 20px auto;
-    padding: 20px;
-    max-width: 700px;
-    border-left: 5px solid #C9A227;
-    text-align: left;
-}
-
 /* FOOTER */
 footer {
     background: black;
@@ -145,8 +95,9 @@ footer {
 <nav>
     <h2>Bayou State Football</h2>
     <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="roster.html">Roster</a></li>
+        <!-- FULL PATH LINKS FOR PROJECT SITE -->
+        <li><a href="/BayoustateFB/index.html">Home</a></li>
+        <li><a href="/BayoustateFB/roster.html">Roster</a></li>
         <li><a href="#war">War Tour</a></li>
         <li><a href="#players">Players</a></li>
         <li><a href="#archive">Archive</a></li>
@@ -158,102 +109,27 @@ footer {
     <p class="gold">2032 – The Year Bayou State Went to War</p>
 </div>
 
-<section>
-    <h2 class="gold">Program Snapshot</h2>
-    <div class="stats">
-        <div class="stat-box">
-            <div class="stat-number" data-target="4">0</div>
-            <div>CFP Seed</div>
-        </div>
-        <div class="stat-box">
-            <div class="stat-number" data-target="1">0</div>
-            <div>All-American</div>
-        </div>
-        <div class="stat-box">
-            <div class="stat-number" data-target="2">0</div>
-            <div>1st Team All-BIG 12</div>
-        </div>
-        <div class="stat-box">
-            <div class="stat-number" data-target="4">0</div>
-            <div>All-Freshman</div>
-        </div>
-    </div>
-</section>
-
 <section id="war">
     <h2 class="gold">2032 War Tour</h2>
     <p>
         A CFP 4-Seed season that launched Bayou State into national prominence.
-        Veteran trench leadership, explosive freshman talent, and national award winners
-        defined The Year Bayou State Went to War.
+        Veteran trench leadership and breakout freshman talent defined the year.
     </p>
 </section>
 
 <section id="players">
     <h2 class="gold">Featured Players</h2>
-
-    <div class="player-card">
-        <h3>Tashaun Callow – TE</h3>
-        <p>John Mackey Award Winner</p>
-        <p>1st Team All-American</p>
-        <p>1st Team All-BIG 12</p>
-    </div>
-
-    <div class="player-card">
-        <h3>Alex Boatwright – RB</h3>
-        <p>1st Team All-BIG 12</p>
-    </div>
-
-    <div class="player-card">
-        <h3>Pat Delmas – EDGE</h3>
-        <p>2nd Team All-BIG 12</p>
-    </div>
-
-    <div class="player-card">
-        <h3>Jayden Bunch – S</h3>
-        <p>BIG 12 All-Freshman Team</p>
-    </div>
-
+    <p>Tashaun Callow | Alex Boatwright | Pat Delmas | Jayden Bunch</p>
 </section>
 
 <section id="archive">
     <h2 class="gold">Dynasty Archive</h2>
-
-    <div class="archive-entry">
-        <h3>2032 – War Tour Season</h3>
-        <p>CFP 4-Seed | National Awards | Breakout Freshman Class</p>
-    </div>
-
-    <div class="archive-entry">
-        <h3>2033 – Coming Soon</h3>
-        <p>The dynasty continues.</p>
-    </div>
-
+    <p>2032 – War Tour Season</p>
 </section>
 
 <footer>
-    © 2032 Bayou State Football — Built for the Dynasty. Powered by the War Tour.
+    © 2032 Bayou State Football — The Year Bayou State Went to War
 </footer>
-
-<script>
-const counters = document.querySelectorAll('.stat-number');
-
-counters.forEach(counter => {
-    const updateCount = () => {
-        const target = +counter.getAttribute('data-target');
-        const count = +counter.innerText;
-        const increment = target / 60;
-
-        if (count < target) {
-            counter.innerText = Math.ceil(count + increment);
-            setTimeout(updateCount, 20);
-        } else {
-            counter.innerText = target;
-        }
-    };
-    updateCount();
-});
-</script>
 
 </body>
 </html>
