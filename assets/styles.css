@@ -1,88 +1,159 @@
-    * { box-sizing: border-box; }
+/* =========================
+   GLOBAL STYLES
+========================= */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
 body {
-    margin: 0;
-    font-family: 'Segoe UI', sans-serif;
-    background-color: #0a0a0a;
-    color: white;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background-color: #0f172a;
+  color: #f1f5f9;
+  line-height: 1.6;
 }
+
+/* =========================
+   NAVIGATION
+========================= */
 
 nav {
-    background: rgba(0,0,0,0.95);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 30px;
-    border-bottom: 2px solid #C9A227;
+  background-color: #111827;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
-nav img { height: 45px; }
-
-.nav-links {
-    display: flex;
-    gap: 25px;
+nav a {
+  color: #38bdf8;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s ease;
 }
 
-.nav-links a {
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
+nav a:hover {
+  color: #facc15;
 }
 
-.nav-links a:hover,
-.nav-links a.active {
-    color: #C9A227;
+/* =========================
+   HEADERS
+========================= */
+
+.page-header {
+  text-align: center;
+  padding: 60px 20px 30px 20px;
+  background: linear-gradient(to right, #0f172a, #1e293b);
 }
 
-.page {
-    padding: 60px 8%;
-    max-width: 1100px;
-    margin: auto;
+.page-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
 }
 
-.page h2 {
-    color: #C9A227;
-    border-bottom: 2px solid #C9A227;
-    padding-bottom: 6px;
+.page-header p {
+  color: #94a3b8;
+  font-size: 1rem;
 }
 
-.page h3 { margin-top: 30px; }
+/* =========================
+   SECTION LAYOUT
+========================= */
 
+section {
+  padding: 40px 20px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+h2 {
+  margin: 40px 0 20px 0;
+  color: #facc15;
+  border-bottom: 2px solid #334155;
+  padding-bottom: 5px;
+}
+
+h3 {
+  margin-top: 20px;
+  color: #38bdf8;
+}
+
+/* =========================
+   CARDS
+========================= */
+
+.hof-card,
+.coach-card,
 .player {
-    padding: 6px 0;
-    border-bottom: 1px solid rgba(255,255,255,0.08);
+  background-color: #1e293b;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 12px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.hof-card {
-    margin-bottom: 25px;
-    padding: 15px;
-    background: #111;
-    border-left: 4px solid #C9A227;
+.hof-card:hover,
+.coach-card:hover,
+.player:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
 }
 
-.coach { padding: 6px 0; }
-
-.hero {
-    text-align: center;
-    padding: 120px 20px;
-    background: url("stadium.png") center/cover no-repeat;
+.hof-card h3,
+.coach-card h2 {
+  margin-bottom: 10px;
 }
 
-.hero-overlay {
-    background: rgba(0,0,0,0.7);
-    padding: 80px 20px;
+/* =========================
+   RECORDS
+========================= */
+
+.records-section p {
+  margin-bottom: 8px;
+  padding-left: 10px;
 }
 
-.gold { color: #C9A227; }
-
-.draft-badge img {
-    max-width: 300px;
-    margin-top: 20px;
-}
+/* =========================
+   FOOTER
+========================= */
 
 footer {
-    background: black;
-    padding: 20px;
-    text-align: center;
-    border-top: 2px solid #C9A227;
+  background-color: #111827;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+  font-size: 0.9rem;
+  color: #94a3b8;
+}
+
+/* =========================
+   MOBILE OPTIMIZATION
+========================= */
+
+@media (max-width: 768px) {
+
+  nav {
+    gap: 12px;
+    padding: 12px;
+  }
+
+  .page-header h1 {
+    font-size: 1.8rem;
+  }
+
+  section {
+    padding: 30px 15px;
+  }
+
+  .hof-card,
+  .coach-card,
+  .player {
+    padding: 15px;
+  }
 }
