@@ -41,29 +41,39 @@ section {
 /* NAVIGATION */
 /* ============================= */
 
+/* ============================= */
+/* NAVIGATION (CONSISTENT FIX) */
+/* ============================= */
+
 nav {
+  width: 100%;
   background-color: #111111;
-  padding: 18px 15px;
+  border-bottom: 3px solid #ffd700;
+  padding: 15px 0;
+
   display: flex;
   justify-content: center;
-  gap: 30px;
-  flex-wrap: wrap;
-  border-bottom: 3px solid #ffd700;
-  width: 100%;
 }
 
 nav a {
   color: #00c853;
   text-decoration: none;
   font-weight: bold;
-  font-size: 1.05rem;
+  font-size: 1.1rem;
+
+  padding: 10px 18px;
+  margin: 5px;
+
   transition: 0.2s ease;
 }
 
 nav a:hover {
   color: #ffd700;
 }
-
+/* Allow wrapping cleanly */
+nav {
+  flex-wrap: wrap;
+}
 /* ============================= */
 /* HERO (INDEX ONLY) */
 /* ============================= */
