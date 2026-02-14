@@ -49,6 +49,7 @@ nav {
   gap: 30px;
   flex-wrap: wrap;
   border-bottom: 3px solid #ffd700;
+  width: 100%;
 }
 
 nav a {
