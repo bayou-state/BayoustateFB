@@ -1,1 +1,79 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #111;
+    color: white;
+}
 
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 8%;
+    background-color: #000;
+}
+
+nav img {
+    height: 50px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+.nav-links a.active {
+    color: #C9A227;
+}
+
+.hero {
+    position: relative;
+    height: 85vh;
+    background: url("stadium.png") center/cover no-repeat;
+    display: flex;
+}
+
+.hero-overlay {
+    background: rgba(0,0,0,0.65);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 8%;
+}
+
+.hero h1 {
+    font-size: 52px;
+}
+
+.gold {
+    color: #C9A227;
+}
+
+.draft-badge img {
+    max-width: 320px;
+}
+
+.page {
+    padding: 60px 8%;
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: #1c1c1c;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #333;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: black;
+}
