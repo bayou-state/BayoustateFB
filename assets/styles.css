@@ -202,3 +202,26 @@ footer {
     margin: 30px auto;
   }
 }
+/* ============================= */
+/* STRONG TEXT SCALING */
+/* ============================= */
+
+section p {
+  font-size: 1.25rem;
+  line-height: 1.9;
+  margin-bottom: 12px;
+}
+
+.hof-card,
+.coach-card,
+.player {
+  font-size: 1.3rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.6rem;
+}
