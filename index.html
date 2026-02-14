@@ -4,291 +4,40 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Bayou State Football</title>
-
-<style>
-* { box-sizing: border-box; }
-
-body {
-    margin: 0;
-    font-family: 'Segoe UI', sans-serif;
-    background-color: #0a0a0a;
-    color: white;
-}
-
-nav {
-    background: rgba(0,0,0,0.95);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 30px;
-    border-bottom: 2px solid #C9A227;
-    position: relative;
-}
-
-nav img { height: 45px; }
-
-.nav-links {
-    display: flex;
-    gap: 25px;
-}
-
-.nav-links button {
-    background: none;
-    border: none;
-    color: white;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-.nav-links button:hover { color: #C9A227; }
-
-.menu-toggle {
-    display: none;
-    font-size: 26px;
-    cursor: pointer;
-    color: #C9A227;
-}
-
-.section {
-    display: none;
-    padding: 60px 8%;
-    max-width: 1100px;
-    margin: auto;
-}
-
-.section.active { display: block; }
-
-.section h2 {
-    color: #C9A227;
-    border-bottom: 2px solid #C9A227;
-    padding-bottom: 6px;
-}
-
-.section h3 { margin-top: 30px; }
-
-.player {
-    padding: 6px 0;
-    border-bottom: 1px solid rgba(255,255,255,0.08);
-}
-
-.hof-card {
-    margin-bottom: 25px;
-    padding: 15px;
-    background: #111;
-    border-left: 4px solid #C9A227;
-}
-
-.coach { padding: 6px 0; }
-
-.hero {
-    text-align: center;
-    padding: 100px 20px;
-    background: linear-gradient(to bottom, #0B3D2E, #000);
-}
-
-@media (max-width: 768px) {
-    .menu-toggle { display: block; }
-
-    .nav-links {
-        display: none;
-        flex-direction: column;
-        background: #111;
-        position: absolute;
-        top: 65px;
-        left: 0;
-        width: 100%;
-        padding: 15px 0;
-        text-align: center;
-    }
-
-    .nav-links.active { display: flex; }
-
-    .nav-links button {
-        padding: 12px 0;
-        font-size: 16px;
-    }
-}
-
-footer {
-    background: black;
-    padding: 20px;
-    text-align: center;
-    border-top: 2px solid #C9A227;
-}
-</style>
+<link rel="stylesheet" href="assets/styles.css">
 </head>
-
 <body>
 
 <nav>
-    <img src="logos.png" alt="Bayou State Logo">
-    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
-    <div class="nav-links" id="navLinks">
-        <button onclick="showSection('home')">Home</button>
-        <button onclick="showSection('roster')">Roster</button>
-        <button onclick="showSection('records')">Records</button>
-        <button onclick="showSection('hof')">HOF</button>
-        <button onclick="showSection('coaches')">Coaching Staff</button>
+    <img src="assets/logos.png" alt="Bayou State Logo">
+    <div class="nav-links">
+        <a href="index.html" class="active">Home</a>
+        <a href="roster.html">Roster</a>
+        <a href="records.html">Records</a>
+        <a href="hof.html">HOF</a>
+        <a href="coaches.html">Coaching Staff</a>
     </div>
 </nav>
 
-<!-- HOME -->
-<div id="home" class="section active hero">
-    <h1>Bayou State Football</h1>
-    <p style="color:#C9A227;">Back-to-Back BIG 12 Champions</p>
-    <p>The War Tour Continues.</p>
-</div>
+<section class="hero">
+    <div class="hero-overlay">
 
-<!-- ROSTER -->
-<div id="roster" class="section">
-<h2>2032 Official Team Roster</h2>
+        <div class="hero-content">
+            <h1>Bayou State Football</h1>
+            <p class="gold">Back-to-Back BIG 12 Champions</p>
+            <p>The War Tour Continues.</p>
+        </div>
 
-<h3>Quarterbacks</h3>
-<div class="player">#7 Louis Waiters — JR (RS)</div>
-<div class="player">#13 Ricardo Cooke — FR (RS)</div>
-<div class="player">#3 Joey Neufeld — SO (RS)</div>
-<div class="player">#1 Bradley Garland — FR</div>
+        <div class="draft-badge">
+            <img src="assets/draft.png" alt="Draft Graphic">
+        </div>
 
-<h3>Running Backs</h3>
-<div class="player">#28 Alex Boatwright — SR (RS) — 1st Team All-BIG 12</div>
-<div class="player">#23 Branden Ball — FR (RS) — BIG 12 All-Freshman</div>
-<div class="player">#0 Marquez Benshaw — FR — BIG 12 All-Freshman</div>
-
-<h3>Wide Receivers</h3>
-<div class="player">#17 Eric Shabazz — JR</div>
-<div class="player">#9 Rasheem Drew — JR</div>
-<div class="player">#11 Kwabena Madubuike — FR — BIG 12 All-Freshman</div>
-<div class="player">#4 Maka Bundy — FR (RS)</div>
-
-<h3>Tight Ends</h3>
-<div class="player">#5 Tashaun Callow — SO — John Mackey Award Winner — 1st Team All-American</div>
-<div class="player">#81 Marquee Bramble — FR</div>
-<div class="player">#84 Nick Tuttle — JR (RS)</div>
-<div class="player">#85 Denard Tonyan — SO</div>
-
-<h3>Offensive Line</h3>
-<div class="player">#66 Eli Kessler — LT — SR (RS)</div>
-<div class="player">#57 Fetu Choy — LG — SO</div>
-<div class="player">#75 Lionel Marvin — C — JR (RS)</div>
-<div class="player">#58 Jeffery Fuller — RG — SR</div>
-<div class="player">#70 Monty Nesbit — RT — SO (RS)</div>
-
-<h3>Defensive Line</h3>
-<div class="player">#4 Pascal Nwokeji — EDGE — JR (RS)</div>
-<div class="player">#56 Pat Delmas — EDGE — SR (RS) — 2nd Team All-BIG 12</div>
-<div class="player">#92 Lamar Fairchild — DT — SO (RS)</div>
-<div class="player">#77 Gideon Chekwa — DT — SR</div>
-
-<h3>Linebackers (4-2-5)</h3>
-<div class="player">SAM: #52 Khari Reynaud — SO</div>
-<div class="player">MIKE: #33 Trent Adams — SO (RS)</div>
-<div class="player">WILL: #0 Dorian Hagg — JR (RS)</div>
-
-<h3>Secondary</h3>
-<div class="player">CB1: #24 Adonis Landers — SR</div>
-<div class="player">CB2: #15 Jimmy Sharp — JR (RS)</div>
-<div class="player">FS: #21 Lester Boyce — JR</div>
-<div class="player">SS: #25 Quincy Oladokun — SO</div>
-
-<h3>Special Teams</h3>
-<div class="player">K: #16 Jake Mare — SO</div>
-<div class="player">P: #15 Jamie Ferreira — JR (RS)</div>
-</div>
-
-<!-- RECORDS -->
-<div id="records" class="section">
-<h2>Program Records</h2>
-
-<h3>Passing</h3>
-<p>Yards (Game): 482 — Darius Kincaid (2019)</p>
-<p>Yards (Season): 3,842 — Marcus Vale (2029)</p>
-<p>Yards (Career): 10,904 — Caleb Rowe (2026–2029)</p>
-<p>TD (Game): 6 — Marcus Vale (2029)</p>
-<p>TD (Season): 34 — Caleb Rowe (2028)</p>
-<p>TD (Career): 88 — Caleb Rowe (2026–2029)</p>
-
-<h3>Rushing</h3>
-<p>Yards (Game): 268 — Terrell Boone (2007)</p>
-<p>Yards (Season): 1,744 — Jamal Brice (2028)</p>
-<p>Yards (Career): 4,102 — Jamal Brice (2025–2028)</p>
-<p>TD (Game): 4 — Terrell Boone (2007)</p>
-<p>TD (Season): 19 — Jamal Brice (2028)</p>
-<p>TD (Career): 46 — Jamal Brice (2025–2028)</p>
-
-<h3>Receiving</h3>
-<p>Yards (Game): 211 — Avery Monroe (2014)</p>
-<p>Yards (Season): 1,386 — Malik Stratton (2030)</p>
-<p>Yards (Career): 3,972 — Malik Stratton (2028–2031)</p>
-<p>TD (Game): 3 — Avery Monroe (2014)</p>
-<p>TD (Season): 15 — Malik Stratton (2030)</p>
-<p>TD (Career): 37 — Malik Stratton (2028–2031)</p>
-</div>
-
-<!-- HOF -->
-<div id="hof" class="section">
-<h2>Bayou State Hall of Fame</h2>
-
-<div class="hof-card">
-<strong>Captain Wilds</strong><br>
-Cornerback (2030–2031)<br>
-Leader of the championship secondary and modern defensive standard.
-</div>
-
-<div class="hof-card">
-<strong>Jose Dwyer</strong><br>
-Cornerback (2030–2031)<br>
-Lockdown corner opposite Captain Wilds during the War Tour rise.
-</div>
-
-<div class="hof-card">
-<strong>Juan Rabe</strong><br>
-EDGE (2031)<br>
-Dominant pass rusher who forced weekly protection adjustments.
-</div>
-
-<div class="hof-card">
-<strong>Terrance King</strong><br>
-Running Back (1999–2002)<br>
-Early-era offensive foundation piece.
-</div>
-
-</div>
-
-<!-- COACHES -->
-<div id="coaches" class="section">
-<h2>2032 Coaching Staff</h2>
-
-<div class="coach"><strong>Head Coach:</strong> Caleb Landry</div>
-<div class="coach"><strong>Offensive Coordinator:</strong> Jameson Sheets</div>
-<div class="coach"><strong>Defensive Coordinator:</strong> Earnest Hill</div>
-<div class="coach"><strong>Graduate Assistant / WR Coach:</strong> Cam Wake</div>
-<div class="coach"><strong>Offensive Line Coach:</strong> Marcus Dupree Jr.</div>
-<div class="coach"><strong>Running Backs Coach:</strong> DeShawn Carter</div>
-<div class="coach"><strong>Defensive Line Coach:</strong> Tyrone Cole</div>
-<div class="coach"><strong>Linebackers Coach:</strong> Andre Holloway</div>
-<div class="coach"><strong>Secondary Coach:</strong> Malik Benton</div>
-<div class="coach"><strong>Strength & Conditioning:</strong> Victor Ramos</div>
-<div class="coach"><strong>Director of Recruiting:</strong> Trey Boudreaux</div>
-
-</div>
+    </div>
+</section>
 
 <footer>
 © 2032 Bayou State Football — The War Tour Continues
 </footer>
-
-<script>
-function showSection(sectionId) {
-    document.querySelectorAll('.section').forEach(section => {
-        section.classList.remove('active');
-    });
-    document.getElementById(sectionId).classList.add('active');
-    document.getElementById("navLinks").classList.remove("active");
-}
-
-function toggleMenu() {
-    document.getElementById("navLinks").classList.toggle("active");
-}
-</script>
 
 </body>
 </html>
