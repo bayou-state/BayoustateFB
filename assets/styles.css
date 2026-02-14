@@ -1,30 +1,38 @@
+/* RESET */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* BODY */
 body {
   font-family: Arial, sans-serif;
-  background-color: #0f172a;
-  color: white;
+  background-color: #000000;
+  color: #f5f5f5;
   line-height: 1.6;
 }
 
-/* NAV */
+/* NAVIGATION */
 nav {
-  background: #111827;
+  background-color: #111111;
   padding: 15px;
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 25px;
   flex-wrap: wrap;
+  border-bottom: 3px solid #ffd700;
 }
 
 nav a {
-  color: #38bdf8;
+  color: #00c853;
   text-decoration: none;
   font-weight: bold;
+  transition: 0.2s;
+}
+
+nav a:hover {
+  color: #ffd700;
 }
 
 /* HERO */
@@ -39,29 +47,55 @@ nav a {
 }
 
 .hero-overlay {
-  background: rgba(0,0,0,0.6);
+  background: rgba(0,0,0,0.7);
   padding: 30px;
   text-align: center;
   border-radius: 8px;
+  border: 2px solid #ffd700;
 }
 
 .hero h1 {
   font-size: 2.5rem;
+  color: #00c853;
 }
 
-/* SECTION */
+/* HEADERS */
+h1, h2, h3 {
+  color: #00c853;
+}
+
+h2 {
+  margin-bottom: 15px;
+  border-bottom: 2px solid #ffd700;
+  padding-bottom: 5px;
+}
+
+/* SECTIONS */
 section {
   padding: 40px 20px;
   max-width: 1100px;
   margin: auto;
 }
 
-h2 {
+/* CARDS */
+.hof-card,
+.coach-card,
+.player {
+  background-color: #111111;
+  padding: 20px;
   margin-bottom: 20px;
-  color: #facc15;
+  border-left: 5px solid #ffd700;
+  border-radius: 6px;
+  transition: 0.2s;
 }
 
-/* IMAGES */
+.hof-card:hover,
+.coach-card:hover,
+.player:hover {
+  transform: translateY(-4px);
+}
+
+/* IMAGE GRID */
 .image-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -70,19 +104,23 @@ h2 {
 
 .image-card img {
   width: 100%;
-  border-radius: 8px;
+  border-radius: 6px;
 }
 
 /* FOOTER */
 footer {
-  background: #111827;
+  background-color: #111111;
   padding: 20px;
   text-align: center;
-  margin-top: 40px;
+  border-top: 3px solid #ffd700;
 }
 
 /* MOBILE FIX */
 @media (max-width: 768px) {
+
+  nav {
+    gap: 12px;
+  }
 
   .hero {
     height: 40vh;
@@ -96,7 +134,7 @@ footer {
     grid-template-columns: 1fr;
   }
 
-  nav {
-    gap: 10px;
+  section {
+    padding: 30px 15px;
   }
 }
