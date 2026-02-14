@@ -32,8 +32,8 @@ body {
 section {
   width: 100%;
   max-width: 1100px;
-  margin: 40px auto;
-  padding: 0 20px;
+  margin: 60px auto;      /* more consistent top spacing */
+  padding: 0 20px 80px 20px; /* bottom breathing room */
   flex: 1;
 }
 
