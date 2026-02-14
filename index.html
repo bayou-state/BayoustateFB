@@ -11,7 +11,6 @@ body {
     font-family: 'Segoe UI', sans-serif;
     background-color: #0a0a0a;
     color: white;
-    overflow-x: hidden;
 }
 
 /* NAVBAR */
@@ -24,8 +23,20 @@ nav {
     border-bottom: 2px solid #C9A227;
 }
 
+nav .logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
 nav img {
     height: 45px;
+}
+
+nav h2 {
+    margin: 0;
+    color: #C9A227;
+    letter-spacing: 2px;
 }
 
 nav ul {
@@ -39,7 +50,6 @@ nav a {
     color: white;
     text-decoration: none;
     font-weight: bold;
-    letter-spacing: 1px;
     transition: 0.3s;
 }
 
@@ -47,23 +57,32 @@ nav a:hover {
     color: #C9A227;
 }
 
+/* CHAMP BANNER */
+.champ-banner {
+    background: #C9A227;
+    color: black;
+    text-align: center;
+    padding: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
 /* HERO */
 .hero {
-    position: relative;
     text-align: center;
     padding: 120px 20px;
     background: linear-gradient(to bottom, #0B3D2E, #000);
 }
 
-.hero img.primary-logo {
-    width: 280px;
+.hero img {
+    width: 260px;
     margin-bottom: 20px;
-    filter: drop-shadow(0 0 20px rgba(201,162,39,0.6));
+    filter: drop-shadow(0 0 20px rgba(201,162,39,0.5));
 }
 
 .hero h1 {
-    font-size: 52px;
-    margin: 10px 0;
+    font-size: 48px;
+    margin-bottom: 10px;
     letter-spacing: 4px;
 }
 
@@ -71,49 +90,32 @@ nav a:hover {
     color: #C9A227;
 }
 
-.champ-banner {
-    background: #C9A227;
-    color: black;
-    font-weight: bold;
-    padding: 12px;
-    letter-spacing: 2px;
-}
-
-/* WATERMARK EYE */
-.watermark {
-    position: absolute;
-    bottom: -50px;
-    right: -50px;
-    opacity: 0.05;
-    width: 500px;
-    pointer-events: none;
-}
-
 /* SECTION */
 section {
-    padding: 80px 10%;
+    padding: 70px 10%;
     text-align: center;
 }
 
 .section-title {
-    font-size: 32px;
-    margin-bottom: 40px;
+    font-size: 30px;
+    margin-bottom: 30px;
     border-bottom: 2px solid #C9A227;
     display: inline-block;
     padding-bottom: 5px;
 }
 
-/* CHAMPIONSHIP BADGE */
-.championship {
+/* INFO BOX */
+.info-box {
     background: #111;
     padding: 40px;
     border-radius: 15px;
-    box-shadow: 0 0 30px rgba(201,162,39,0.3);
+    box-shadow: 0 0 25px rgba(201,162,39,0.2);
 }
 
+/* FOOTER */
 footer {
     background: black;
-    padding: 30px;
+    padding: 25px;
     text-align: center;
     border-top: 2px solid #C9A227;
 }
@@ -123,10 +125,15 @@ footer {
 <body>
 
 <nav>
-    <img src="logos.png" alt="Bayou State Secondary Logo">
+    <div class="logo">
+        <img src="logos.png" alt="Bayou State Logo">
+        <h2>BAYOU STATE</h2>
+    </div>
+
     <ul>
         <li><a href="/BayoustateFB/index.html">Home</a></li>
         <li><a href="/BayoustateFB/roster.html">Roster</a></li>
+        <li><a href="/BayoustateFB/records.html">Records</a></li>
     </ul>
 </nav>
 
@@ -135,34 +142,28 @@ footer {
 </div>
 
 <div class="hero">
-    <img src="logos.png" class="primary-logo" alt="Bayou State Primary Logo">
+    <img src="logos.png" alt="Primary Gator Logo">
     <h1>BAYOU STATE FOOTBALL</h1>
     <p class="gold">The Dynasty Lives in the Swamp</p>
-
-    <!-- Watermark -->
-    <img src="logos.png" class="watermark" alt="">
 </div>
 
 <section>
-    <h2 class="section-title gold">Championship Standard</h2>
-    <div class="championship">
-        <h3>BIG 12 Champions</h3>
-        <p>2031 | 2032</p>
-        <p>CFP 4-Seed — The War Tour Era</p>
+    <h2 class="section-title gold">Program Standard</h2>
+    <div class="info-box">
+        <p>
+            Built on dominance in the trenches.  
+            Fueled by elite quarterback play.  
+            Defined by championship culture.
+        </p>
+        <p>
+            Bayou State doesn’t rebuild.  
+            We reload.
+        </p>
     </div>
 </section>
 
-<section>
-    <h2 class="section-title gold">Program Identity</h2>
-    <p>
-        Built on trench dominance. Fueled by speed.  
-        Defined by discipline.  
-        Bayou State doesn’t rebuild — we reload.
-    </p>
-</section>
-
 <footer>
-    © 2032 Bayou State Football — Built for the Dynasty
+© 2032 Bayou State Football — The War Tour Era
 </footer>
 
 </body>
