@@ -3,142 +3,157 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Bayou State Football | 2032 Official Roster</title>
+<title>Bayou State Football | 2032 Roster</title>
 
 <style>
 body {
     margin: 0;
-    font-family: 'Georgia', serif;
-    background-color: #0b2e1f;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #0a0a0a;
     color: white;
 }
 
-header {
-    background-color: #124734;
-    padding: 20px;
-    text-align: center;
-    border-bottom: 4px solid gold;
+/* NAVBAR */
+nav {
+    background: rgba(0,0,0,0.95);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    border-bottom: 2px solid #C9A227;
 }
 
-h1 {
+nav img {
+    height: 45px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
     margin: 0;
-    color: gold;
 }
 
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #C9A227;
+}
+
+/* HEADER */
+.header {
+    text-align: center;
+    padding: 60px 20px;
+    background: linear-gradient(to bottom, #0B3D2E, #000);
+}
+
+.header h1 {
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+.gold {
+    color: #C9A227;
+}
+
+/* RETURN BUTTON */
+.return-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 25px;
+    background: #C9A227;
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.return-btn:hover {
+    background: white;
+}
+
+/* ROSTER SECTIONS */
 section {
-    padding: 30px 10%;
+    padding: 50px 10%;
 }
 
 h2 {
-    color: gold;
-    border-bottom: 2px solid gold;
+    color: #C9A227;
+    border-bottom: 2px solid #C9A227;
     padding-bottom: 5px;
 }
 
-.position-group {
-    margin-bottom: 25px;
-}
-
 .player {
-    padding: 6px 0;
+    padding: 8px 0;
     border-bottom: 1px solid rgba(255,255,255,0.1);
 }
 
-.footer {
-    text-align: center;
+footer {
+    background: black;
     padding: 20px;
-    background-color: #124734;
-    border-top: 4px solid gold;
+    text-align: center;
+    border-top: 2px solid #C9A227;
 }
 </style>
 </head>
 
 <body>
 
-<header>
-    <h1>Bayou State Football</h1>
-    <p>2032 Official Team Roster</p>
-</header>
+<nav>
+    <img src="logos.png" alt="Bayou State Logo">
+    <ul>
+        <li><a href="/BayoustateFB/index.html">Home</a></li>
+        <li><a href="/BayoustateFB/roster.html">Roster</a></li>
+    </ul>
+</nav>
+
+<div class="header">
+    <h1>2032 Official Roster</h1>
+    <p class="gold">Back-to-Back BIG 12 Champions</p>
+    <a href="/BayoustateFB/index.html" class="return-btn">Return to Home</a>
+</div>
 
 <section>
 <h2>Quarterbacks</h2>
-<div class="position-group">
 <div class="player">#7 Louis Waiters — JR (RS)</div>
 <div class="player">#13 Ricardo Cooke — FR (RS)</div>
 <div class="player">#3 Joey Neufeld — SO (RS)</div>
 <div class="player">#1 Bradley Garland — FR</div>
-</div>
-
-<h2>Running Backs</h2>
-<div class="position-group">
-<div class="player">#28 Alex Boatwright — SR (RS) — 1st Team All-BIG 12</div>
-<div class="player">#23 Branden Ball — FR (RS) — BIG 12 All-Freshman</div>
-<div class="player">#0 Marquez Benshaw — FR — BIG 12 All-Freshman</div>
-</div>
-
-<h2>Wide Receivers</h2>
-<div class="position-group">
-<div class="player">#17 Eric Shabazz — JR</div>
-<div class="player">#9 Rasheem Drew — JR</div>
-<div class="player">#11 Kwabena Madubuike — FR — BIG 12 All-Freshman</div>
-<div class="player">#4 Maka Bundy — FR (RS)</div>
-</div>
-
-<h2>Tight Ends</h2>
-<div class="position-group">
-<div class="player">#5 Tashaun Callow — SO — John Mackey Award Winner — 1st Team All-American</div>
-<div class="player">#81 Marquee Bramble — FR</div>
-<div class="player">#84 Nick Tuttle — JR (RS)</div>
-<div class="player">#85 Denard Tonyan — SO</div>
-</div>
-
-<h2>Offensive Line</h2>
-<div class="position-group">
-<div class="player">LT: #66 Eli Kessler — SR (RS)</div>
-<div class="player">LG: #57 Fetu Choy — SO</div>
-<div class="player">C: #75 Lionel Marvin — JR (RS)</div>
-<div class="player">RG: #58 Jeffery Fuller — SR</div>
-<div class="player">RT: #70 Monty Nesbit — SO (RS)</div>
-</div>
-
-<h2>Defensive Line</h2>
-<div class="position-group">
-<div class="player">EDGE: #4 Pascal Nwokeji — JR (RS)</div>
-<div class="player">EDGE: #56 Pat Delmas — SR (RS) — 2nd Team All-BIG 12</div>
-<div class="player">DT: #92 Lamar Fairchild — SO (RS)</div>
-<div class="player">DT: #77 Gideon Chekwa — SR</div>
-</div>
-
-<h2>Linebackers</h2>
-<div class="position-group">
-<div class="player">SAM: #52 Khari Reynaud — SO</div>
-<div class="player">MIKE: #41 Eric Bajema — SR</div>
-<div class="player">WILL: #0 Dorian Hagg — JR (RS)</div>
-</div>
-
-<h2>Defensive Backs</h2>
-<div class="position-group">
-<div class="player">CB: #24 Adonis Landers — SR</div>
-<div class="player">CB: #15 Jimmy Sharp — JR (RS)</div>
-<div class="player">FS: #21 Lester Boyce — JR</div>
-<div class="player">SS: #25 Quincy Oladokun — SO</div>
-<div class="player">S: #6 Jayden Bunch — FR — BIG 12 All-Freshman</div>
-</div>
-
-<h2>Special Teams</h2>
-<div class="position-group">
-<div class="player">K: #16 Jake Mare — SO</div>
-<div class="player">P: #15 Jamie Ferreira — JR (RS)</div>
-<div class="player">LS: #84 Nick Tuttle — JR (RS)</div>
-<div class="player">PR: #9 Rasheem Drew — JR</div>
-<div class="player">KR: #11 Kwabena Madubuike — FR</div>
-</div>
-
 </section>
 
-<div class="footer">
-    © 2032 Bayou State Football — The Year Bayou State Went to War
-</div>
+<section>
+<h2>Running Backs</h2>
+<div class="player">#28 Alex Boatwright — 1st Team All-BIG 12</div>
+<div class="player">#23 Branden Ball — BIG 12 All-Freshman</div>
+<div class="player">#0 Marquez Benshaw — BIG 12 All-Freshman</div>
+</section>
+
+<section>
+<h2>Tight Ends</h2>
+<div class="player">#5 Tashaun Callow — Mackey Award Winner</div>
+<div class="player">#81 Marquee Bramble</div>
+<div class="player">#84 Nick Tuttle</div>
+<div class="player">#85 Denard Tonyan</div>
+</section>
+
+<section>
+<h2>Defensive Leaders</h2>
+<div class="player">#56 Pat Delmas — 2nd Team All-BIG 12</div>
+<div class="player">#24 Adonis Landers — CB1</div>
+<div class="player">#41 Eric Bajema — MIKE</div>
+<div class="player">#6 Jayden Bunch — All-Freshman</div>
+</section>
+
+<footer>
+© 2032 Bayou State Football — The War Tour Continues
+</footer>
 
 </body>
 </html>
