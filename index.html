@@ -8,41 +8,39 @@
 <style>
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #0B3D2E;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #0a0a0a;
     color: white;
+    overflow-x: hidden;
 }
 
 /* NAVBAR */
 nav {
-    position: sticky;
-    top: 0;
-    background: black;
+    background: rgba(0,0,0,0.95);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 30px;
-    z-index: 1000;
+    padding: 15px 40px;
+    border-bottom: 2px solid #C9A227;
 }
 
-nav h2 {
-    margin: 0;
-    color: #C9A227;
+nav img {
+    height: 45px;
 }
 
 nav ul {
     list-style: none;
     display: flex;
-    gap: 25px;
+    gap: 30px;
     margin: 0;
-    padding: 0;
 }
 
 nav a {
     color: white;
     text-decoration: none;
     font-weight: bold;
-    transition: 0.3s ease;
+    letter-spacing: 1px;
+    transition: 0.3s;
 }
 
 nav a:hover {
@@ -51,41 +49,73 @@ nav a:hover {
 
 /* HERO */
 .hero {
+    position: relative;
     text-align: center;
     padding: 120px 20px;
-    background: linear-gradient(270deg, #0B3D2E, #145A32, #0B3D2E);
-    background-size: 600% 600%;
-    animation: gradientMove 12s ease infinite;
+    background: linear-gradient(to bottom, #0B3D2E, #000);
 }
 
-@keyframes gradientMove {
-    0% {background-position: 0% 50%;}
-    50% {background-position: 100% 50%;}
-    100% {background-position: 0% 50%;}
+.hero img.primary-logo {
+    width: 280px;
+    margin-bottom: 20px;
+    filter: drop-shadow(0 0 20px rgba(201,162,39,0.6));
 }
 
 .hero h1 {
-    font-size: 48px;
+    font-size: 52px;
+    margin: 10px 0;
     letter-spacing: 4px;
-    margin-bottom: 10px;
 }
 
 .gold {
     color: #C9A227;
 }
 
+.champ-banner {
+    background: #C9A227;
+    color: black;
+    font-weight: bold;
+    padding: 12px;
+    letter-spacing: 2px;
+}
+
+/* WATERMARK EYE */
+.watermark {
+    position: absolute;
+    bottom: -50px;
+    right: -50px;
+    opacity: 0.05;
+    width: 500px;
+    pointer-events: none;
+}
+
 /* SECTION */
 section {
-    padding: 70px 20px;
+    padding: 80px 10%;
     text-align: center;
 }
 
-/* FOOTER */
+.section-title {
+    font-size: 32px;
+    margin-bottom: 40px;
+    border-bottom: 2px solid #C9A227;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+/* CHAMPIONSHIP BADGE */
+.championship {
+    background: #111;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 0 30px rgba(201,162,39,0.3);
+}
+
 footer {
     background: black;
+    padding: 30px;
     text-align: center;
-    padding: 20px;
-    color: #aaa;
+    border-top: 2px solid #C9A227;
 }
 </style>
 </head>
@@ -93,42 +123,46 @@ footer {
 <body>
 
 <nav>
-    <h2>Bayou State Football</h2>
+    <img src="logos.png" alt="Bayou State Secondary Logo">
     <ul>
-        <!-- FULL PATH LINKS FOR PROJECT SITE -->
         <li><a href="/BayoustateFB/index.html">Home</a></li>
         <li><a href="/BayoustateFB/roster.html">Roster</a></li>
-        <li><a href="#war">War Tour</a></li>
-        <li><a href="#players">Players</a></li>
-        <li><a href="#archive">Archive</a></li>
     </ul>
 </nav>
 
-<div class="hero">
-    <h1>BAYOU STATE FOOTBALL</h1>
-    <p class="gold">2032 – The Year Bayou State Went to War</p>
+<div class="champ-banner">
+    BACK-TO-BACK BIG 12 CHAMPIONS
 </div>
 
-<section id="war">
-    <h2 class="gold">2032 War Tour</h2>
+<div class="hero">
+    <img src="logos.png" class="primary-logo" alt="Bayou State Primary Logo">
+    <h1>BAYOU STATE FOOTBALL</h1>
+    <p class="gold">The Dynasty Lives in the Swamp</p>
+
+    <!-- Watermark -->
+    <img src="logos.png" class="watermark" alt="">
+</div>
+
+<section>
+    <h2 class="section-title gold">Championship Standard</h2>
+    <div class="championship">
+        <h3>BIG 12 Champions</h3>
+        <p>2031 | 2032</p>
+        <p>CFP 4-Seed — The War Tour Era</p>
+    </div>
+</section>
+
+<section>
+    <h2 class="section-title gold">Program Identity</h2>
     <p>
-        A CFP 4-Seed season that launched Bayou State into national prominence.
-        Veteran trench leadership and breakout freshman talent defined the year.
+        Built on trench dominance. Fueled by speed.  
+        Defined by discipline.  
+        Bayou State doesn’t rebuild — we reload.
     </p>
 </section>
 
-<section id="players">
-    <h2 class="gold">Featured Players</h2>
-    <p>Tashaun Callow | Alex Boatwright | Pat Delmas | Jayden Bunch</p>
-</section>
-
-<section id="archive">
-    <h2 class="gold">Dynasty Archive</h2>
-    <p>2032 – War Tour Season</p>
-</section>
-
 <footer>
-    © 2032 Bayou State Football — The Year Bayou State Went to War
+    © 2032 Bayou State Football — Built for the Dynasty
 </footer>
 
 </body>
