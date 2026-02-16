@@ -301,3 +301,17 @@ footer {
     padding: 8px 14px;
   }
 }
+.draft-badge {
+  background-color: #bfa046;
+  color: #111;
+  font-weight: bold;
+  padding: 4px 8px;
+  border-radius: 4px;
+  margin-left: 6px;
+  font-size: 0.85em;
+}
+
+.alumni-card.drafted {
+  border-left: 4px solid #bfa046;
+  padding-left: 8px;
+}
