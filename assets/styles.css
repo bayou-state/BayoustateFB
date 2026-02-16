@@ -163,6 +163,28 @@ h2 {
 h3 {
   font-size: 1.6rem;
   margin: 30px 0 15px 0;
+
+  /* ============================= */
+/* ALUMNI PAGE */
+/* ============================= */
+
+.alumni-card {
+  background-color: #111111;
+  padding: 18px;
+  margin-bottom: 15px;
+  border-left: 4px solid #ffd700;
+  border-radius: 6px;
+  font-size: 1.2rem;
+  transition: 0.2s ease;
+}
+
+.alumni-card:hover {
+  transform: translateX(5px);
+}
+
+.legend {
+  border-left: 4px solid #00c853;
+}
   color: #00c853;
 }
 
