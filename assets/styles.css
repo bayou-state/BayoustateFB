@@ -163,8 +163,10 @@ h2 {
 h3 {
   font-size: 1.6rem;
   margin: 30px 0 15px 0;
+  color: #00c853;
+}
 
-  /* ============================= */
+/* ============================= */
 /* ALUMNI PAGE */
 /* ============================= */
 
@@ -185,7 +187,10 @@ h3 {
 .legend {
   border-left: 4px solid #00c853;
 }
-  color: #00c853;
+
+.alumni-card.drafted {
+  border-left: 4px solid #bfa046;
+  padding-left: 8px;
 }
 
 /* ============================= */
@@ -301,6 +306,7 @@ footer {
     padding: 8px 14px;
   }
 }
+
 .draft-badge {
   background-color: #bfa046;
   color: #111;
@@ -311,25 +317,22 @@ footer {
   font-size: 0.85em;
 }
 
-.alumni-card.drafted {
-  border-left: 4px solid #bfa046;
-  padding-left: 8px;
+/* ============================= */
+/* RECORD HIGHLIGHT */
+/* ============================= */
 
-  /* Single Game Rushing Record Highlight */
 .record-highlight {
   font-size: 1.4rem;
-  color: #bfa046 !important; /* Force Bayou Gold */
+  color: #bfa046;
 }
 
-/* Make absolutely everything inside gold */
 .record-highlight * {
-  color: #bfa046 !important;
+  color: #bfa046;
 }
 
-/* Keep badge styling */
 .record-highlight .record-badge {
   background-color: #bfa046;
-  color: #111 !important;
+  color: #111;
   padding: 3px 8px;
   border-radius: 4px;
   margin-left: 8px;
