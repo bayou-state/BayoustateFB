@@ -314,28 +314,24 @@ footer {
 .alumni-card.drafted {
   border-left: 4px solid #bfa046;
   padding-left: 8px;
+
+  /* Single Game Rushing Record Highlight */
 .record-highlight {
   font-size: 1.4rem;
-  font-weight: bold;
-  color: #bfa046; /* Bayou Gold */
+  color: #bfa046 !important; /* Force Bayou Gold */
 }
 
+/* Make absolutely everything inside gold */
+.record-highlight * {
+  color: #bfa046 !important;
+}
+
+/* Keep badge styling */
 .record-highlight .record-badge {
   background-color: #bfa046;
-  color: #111;
+  color: #111 !important;
   padding: 3px 8px;
   border-radius: 4px;
   margin-left: 8px;
   font-size: 0.85rem;
-}
-.record-highlight {
-  font-size: 1.4rem;
-  font-weight: bold;
-  color: #bfa046; /* Bayou State Gold */
-}
-
-.record-highlight strong,
-.record-highlight span,
-.record-highlight {
-  color: #bfa046; /* Forces ALL text inside to gold */
 }
